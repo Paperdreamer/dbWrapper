@@ -66,7 +66,7 @@ class dbWrapper {
 		$teil = trim($teil[0]);
 
 		if (!(strtolower($teil) == "select" OR strtolower($teil) == "(select" OR strtolower($teil) == "show")){
-			throw new Exception("ERROR: The function 'dbarray' may not be used for other orders than 'select' or 'show' ");
+			throw new Exception("ERROR: The function 'getList' may not be used for other orders than 'select' or 'show' ");
 		}
 
 		$dbObject = $this->prepare($sql);
@@ -85,7 +85,7 @@ class dbWrapper {
 		$teil = trim($teil[0]);
 
 		if (!(strtolower($teil) == "select" OR strtolower($teil) == "(select" OR strtolower($teil) == "show")){
-			throw new Exception("ERROR: The function 'dbarray' may not be used for other orders than 'select' or 'show' ");
+			throw new Exception("ERROR: The function 'getRow' may not be used for other orders than 'select' or 'show' ");
 		}
 
 		$dbObject = $this->prepare($sql);
