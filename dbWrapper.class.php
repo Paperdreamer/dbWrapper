@@ -9,6 +9,7 @@ class dbWrapper {
 
 	public function __construct($DBName, $DBUser, DBPassword, $DBHost = "localhost", $DBPort = "3306", $DBCharset = "utf8"){
 		$this->charset = $DBCharset;
+	public function __construct($DBName, $DBUser, $DBPassword, $DBHost = "localhost", $DBPort = "3306", $DBCharset = "utf8") {
 
 		// Establish connnection  
 		try {
