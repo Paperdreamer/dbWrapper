@@ -1,18 +1,18 @@
 <?php
 
-require "./config.php";
-
 class dbWrapper {
 
 	private $connection;
-	public $charset = DBCharset;
+	public $charset;
 
 ////////////////////////////////////////////////////////////////////////////
 
-	public function __construct(){
+	public function __construct($DBName, $DBUser, DBPassword, $DBHost = "localhost", $DBPort = "3306", $DBCharset = "utf8"){
+		$this->charset = $DBCharset;
+
 		// Establish connnection  
 		try {
-			$this->connection = new PDO( 'mysql:host=' . DBHost .';dbname=' . DBName . ';port=' . DBPort . ';charset=' . $this->charset, DBUser, DBPassword);
+			$this->connection = new PDO( 'mysql:host=' . $DBHost .';dbname=' . $DBName . ';port=' . $DBPort . ';charset=' . $this->charset, $DBUser, $DBPassword);
 			$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 			if (version_compare(PHP_VERSION, '5.3.6') <= 0) {
