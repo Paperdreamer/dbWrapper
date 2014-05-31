@@ -99,6 +99,11 @@ class dbWrapper {
 		return $this->connection;
 	}
 
+	// Get the id of the last inserted dataset
+	public function getLastInsertId() {
+		return $this->connection->lastInsertId();
+	}
+
 } // end of class
 
 class DBStatement {
