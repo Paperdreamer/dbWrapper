@@ -50,7 +50,7 @@ class dbWrapper {
 		$dbObject = $this->prepare($sql);
 		$statement = $dbObject->execute($parameters);
 
-		return $statement;
+		return $dbObject;
 
 	} // end of function dbquery()
 
