@@ -5,9 +5,3 @@
 
 ##Dependencies
 Currently there are no dependencies.
-
-## Installation
-	// TODO
-
-## Documentation
-	// TODO
